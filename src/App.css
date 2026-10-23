@@ -1,0 +1,51 @@
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* I didn't want to hard code the width in correspondence
+  to how many movies show but trying to find a way where the .css
+  dynamically decided was too complicated so I ended up just hard 
+  coding the grid anyways*/
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.no-poster {
+  aspect-ratio: 2 / 3;
+  display: grid;
+  place-items: center;
+  background: #ddd;
+  border-radius: 8px;
+}
+
+.error {
+  color: crimson;
+}
